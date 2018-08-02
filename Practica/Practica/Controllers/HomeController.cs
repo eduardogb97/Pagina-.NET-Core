@@ -33,5 +33,12 @@ namespace Practica.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public IActionResult Suma()
+        {
+            int x = 10; int y = 20;
+            int c = x + y;
+            ViewData["suma"] = x+y;
+            return View();
+        }
     }
 }
